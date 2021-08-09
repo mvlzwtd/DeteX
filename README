@@ -1,0 +1,33 @@
+1. Install
+Before using this software, you need to install "perl", "bash", "samtools", "mkdir" .And you should put them into the bin dir.
+Requirement: perl >=v5.30.0,samtools >=1.9.
+The directory structure of the software cannot be changed 
+The perl package Cwd.c、File.c，you should have installed.
+
+2.Aligned genome 
+You need to create a folder to store the reference genome 。In the folder,there are 25 files in fasta format.
+The name of each file is chr1.fa、chr2.fa ... chrX.fa、chrY.fa、chrM.fa.
+In the chromosome sequence file,the title of each sequence is chr1、chr2 ...chrX、chrY、chrM.
+
+3. Help
+You can run "perl DeteX.pl " or "perl DeteX.pl -h" to get the meaning and Default value of each parameter of the software .
+
+4.Example
+run: perl DeteX.pl  -tf 0.01 -cb case.bam -nb control.bam -rd bychr -bd sort_small.bed -rt hg19 -od snvindel/detex -sp samplename
+
+input: 
+
+Aligned genome: bychr/chr10.fa  bychr/chr13.fa  bychr/chr16.fa  bychr/chr19.fa  bychr/chr21.fa  bychr/chr3.fa  bychr/chr6.fa  bychr/chr9.fa  bychr/chrY.fa
+                bychr/chr11.fa  bychr/chr14.fa  bychr/chr17.fa  bychr/chr1.fa   bychr/chr22.fa  bychr/chr4.fa  bychr/chr7.fa  bychr/chrM.fa
+                bychr/chr12.fa  bychr/chr15.fa  bychr/chr18.fa  bychr/chr20.fa  bychr/chr2.fa   bychr/chr5.fa  bychr/chr8.fa  bychr/chrX.fa
+
+output:  snvindel/detex/base
+         snvindel/detex/bed
+         snvindel/detex/finalvar
+         snvindel/detex/samplename.var.vcf
+         snvindel/detex/rawvar
+         snvindel/detex/sh
+
+snvindel/detex/samplename.var.vcf is the final result.
+
+
