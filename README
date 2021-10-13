@@ -1,8 +1,9 @@
 1. Install
-Before using this software, you need to install "perl", "bash", "samtools", "mkdir" .And you should put them into the bin dir.
+The software runs on Linux, Unix et.al systems .
+Before using this software, you need to install "perl", "bash", "samtools", "mkdir" .And put them in environment.
 Requirement: perl >=v5.30.0,samtools >=1.9.
 The directory structure of the software cannot be changed 
-The perl package Cwd.c、File.c，you should have installed.
+The perl package Cwd.c、Strict-Perl-2019.07.tar.gz，you should have installed.
 
 2.Aligned genome 
 You need to create a folder to store the reference genome 。In the folder,there are 25 files in fasta format.
